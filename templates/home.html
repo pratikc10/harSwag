@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload .har File</title>
+</head>
+<body>
+  <form id="upload-form" enctype="multipart/form-data">
+    <input type="file" id="har_file" name="har_file">
+    <button type="submit">Upload</button>
+  </form>
+
+  <div id="response"></div>
+
+  <script>
+    document.getElementById('upload-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      var formData = new FormData();
+      formData.append('har_file', document.getElementById('har_file').files[0]);
+
+      fetch('/convertswag', {
+        method: 'POST',
+        body: formData
+      })
+        .then(function(response) {
+          if (response.ok) {
+            return response.blob();
+          } else {
+            throw new Error('Request failed');
+          }
+        })
+        .then(function(blob) {
+          var downloadUrl = window.URL.createObjectURL(blob);
+
+          // Create a link element to initiate the download
+          var downloadLink = document.createElement('a');
+          downloadLink.href = downloadUrl;
+          downloadLink.download = 'har_Swagger.json';
+          downloadLink.click();
+        })
+        .catch(function(error) {
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
