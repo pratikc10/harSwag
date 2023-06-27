@@ -8,7 +8,7 @@ The get swagger function first writes a few codes for swagger format after that 
 
 ### Steps
 1. Pull GitHub repository  for harSwag.( https://github.com/pratikc10/harSwag)
-2. After cloning it we need to create .venv and install the ‘requirements.txt’ file which is present in our code.pip install -r requerment.txt
+2. After cloning it we need to create .venv and install the ‘requirements.txt’ file which is present in our code.
 ```
 pip install -r requerments.txt
 ```
@@ -18,7 +18,7 @@ pip install -r requerments.txt
 ![MicrosoftTeams-image (16)](https://github.com/Debadri-007/harSwag/assets/70701923/67ff3687-f386-4da3-8a0b-ad58db04b328)
 
 
-#### Steps  UI
+### Steps  UI
 1. From http://127.0.0.1:5000/ URL link we can see the UI interface.
 
 ![MicrosoftTeams-image (15)](https://github.com/Debadri-007/harSwag/assets/70701923/b0bd3884-8336-40f9-b86c-2d0f09b5b9c3)
