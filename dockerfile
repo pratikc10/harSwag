@@ -8,6 +8,7 @@ ENV PYTHONUNBUFFERED True
 
 # Copy local code to the container image.
 ENV APP_HOME /app
+ENV PORT 5000
 WORKDIR $APP_HOME
 COPY . ./
 
