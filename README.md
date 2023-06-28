@@ -1,11 +1,25 @@
 # Convert HAR file to SWAGGER file
 
-## Description
-we are rendering “home.html” file on GUI once execution of flask application. In “home.html” file we are uploading a form that is carrying .har file. We are selecting form ID and once the upload button hits, we fire a POST request ('localhost/convertswag') to our backend for converting .har file to swagger JSON file. 
-The “convert swagger” endpoint calls a function get Swagger, and after getting the swagger file we write the file and return the downloaded file.
-The get swagger function first writes a few codes for swagger format after that it fetch the .har file and for each endpoint for the particular host appending all the PATH for swagger format.
+### Overview
+The ".har file to Swagger file" project aims to develop a tool that can convert HTTP Archive files (.har) into Swagger/OpenAPI specification files. The tool will provide an automated and streamlined solution for transforming network traffic data captured in .har format into a Swagger specification, which is widely used for documenting RESTful APIs.
 
-
+### Motivation
+HTTP Archive files (.har) are commonly used to record and analyze network traffic data. However, when it comes to documenting APIs, Swagger is a popular choice due to its rich features, ecosystem support, and compatibility with various API development tools. Converting .har files to Swagger specifications manually can be time-consuming and error-prone. This project aims to automate this conversion process, making it more efficient and reliable.
+### Key Features
+1. **Har File Parsing:** Develop a parser to read .har files and extract relevant information, such as HTTP requests, headers, parameters, and response details.
+2. **Swagger Generation:** Implement a logic to transform the parsed data into a Swagger/OpenAPI specification file.
+3. **Schema Inference:** Analyze the captured request and response payloads to infer data schemas and generate corresponding Swagger schema definitions.
+4. **Path and Operation Generation:** Map the captured requests to Swagger paths and generate corresponding HTTP operations (GET, POST, PUT, etc.) with relevant details.
+5. **Parameter Extraction:** Extract path parameters, query parameters, and request body parameters from the captured requests and include them in the Swagger specification.
+6. **Response Mapping:** Map the captured response details, including status codes, headers, and response bodies, to appropriate Swagger definitions.
+7. **CLI and GUI Interfaces:** Provide command-line and graphical user interfaces to facilitate easy usage and interaction with the conversion tool.
+8. **Error Handling:** Implement robust error handling mechanisms to handle malformed .har files or other exceptional scenarios gracefully.
+### Potential Technologies
+The project can be implemented using a combination of the following technologies and tools:
+- Programming Language: Python  for parsing and generating files
+- Libraries: Python libraries like haralyzer   for parsing .har files 
+- Swagger/OpenAPI Libraries: swagger_ui for Swagger Doc Editor Generator
+- User Interface: Flask and  web-based front-end  is html and javascript for the graphical user interface
 ### Steps to Build  and Run Project without Docker
 1. Clone GitHub repository  for harSwag.( https://github.com/pratikc10/harSwag)
 
