@@ -55,7 +55,7 @@ docker run -p 5000:5000 harswag
 ### Functional Use Case
 1. From http://127.0.0.1:5000/ URL link we can see the UI interface.
 
-![MicrosoftTeams-image (15)](https://github.com/Debadri-007/harSwag/assets/70701923/b0bd3884-8336-40f9-b86c-2d0f09b5b9c3)
+<img width="742" alt="front" src="https://github.com/pratikc10/harSwag/assets/89121076/b586f369-ed2c-4d09-b595-eb8fe38c8082">
 
 2. "Select .har File" from this we can add our .har file.
 3. In the Domain Name we can put domain name as per .har file has or we can keep it empty.
