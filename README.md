@@ -12,12 +12,12 @@ HTTP Archive files (.har) are commonly used to record and analyze network traffi
 4. **Path and Operation Generation:** Map the captured requests to Swagger paths and generate corresponding HTTP operations (GET, POST, PUT, etc.) with relevant details.
 5. **Parameter Extraction:** Extract path parameters, query parameters, and request body parameters from the captured requests and include them in the Swagger specification.
 6. **Response Mapping:** Map the captured response details, including status codes, headers, and response bodies, to appropriate Swagger definitions.
-7. **CLI and GUI Interfaces:** Provide command-line and graphical user interfaces to facilitate easy usage and interaction with the conversion tool.
+7. **Web Interfaces:** Provide Web interface user interfaces to facilitate easy usage and interaction with the conversion tool.
 8. **Error Handling:** Implement robust error handling mechanisms to handle malformed .har files or other exceptional scenarios gracefully.
 ### Potential Technologies
 The project can be implemented using a combination of the following technologies and tools:
 - Programming Language: Python  for parsing and generating files
-- Libraries: Python libraries like haralyzer   for parsing .har files 
+- Libraries: Python libraries like "haralyzer"   for parsing .har files 
 - Swagger/OpenAPI Libraries: swagger_ui for Swagger Doc Editor Generator
 - User Interface: Flask and  web-based front-end  is html and javascript for the graphical user interface
 ### Steps to Build  and Run Project without Docker
