@@ -67,8 +67,7 @@ def get_swagger(file, domain_name):
         "schemes": [],
         "paths": {},
     }
-    print(file)
-    print(swagger_spec)
+    
 
     har_data = json.loads(file.read())
     h = HarParser(har_data)
@@ -254,13 +253,14 @@ def get_swagger(file, domain_name):
 
 @app.route("/convertswag", methods=["POST"])
 def covnvertswag():
-    har_file = request.files["har_file"]
+    har_file1 = request.files["har_file"]
+    har_file = har_file1
+    
     domain_name = request.form["domainName"]
-    # print(domain_name)
+    
     if domain_name == "":
-        print("this is empty")
         domain_name = None
-    print("this is domain name in convert", domain_name)
+    
     swagger = get_swagger(har_file, domain_name)
     swagger_json = json.dumps(swagger)
 
