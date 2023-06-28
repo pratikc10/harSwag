@@ -48,8 +48,8 @@ docker build -t harswag:latest .
 docker run -p 5000:5000 harswag
 ```
 5. Open browser and go to http://localhost:5000
+<img width="742" alt="front" src="https://github.com/pratikc10/harSwag/assets/89121076/b586f369-ed2c-4d09-b595-eb8fe38c8082">
 
-![MicrosoftTeams-image (16)](https://github.com/Debadri-007/harSwag/assets/70701923/67ff3687-f386-4da3-8a0b-ad58db04b328)
 
 
 ### Functional Use Case
